@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Outlet</title>
+
+    <!-- SheetJS -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>Dashboard Outlet</h1>
+            <p>Informasi Outlet 2026</p>
+        </div>
+
+        <a
+            href="01. Informasi_Outlet_2026-R17.xlsx"
+            class="download-button"
+            download
+        >
+            ⬇ Download Excel
+        </a>
+    </header>
+
+
+    <main>
+
+        <!-- Loading -->
+        <div id="loading">
+            Memuat data outlet...
+        </div>
+
+
+        <!-- Error -->
+        <div id="error" class="error"></div>
+
+
+        <!-- Summary -->
+        <section class="summary">
+
+            <div class="card">
+                <span>Total Data</span>
+                <strong id="totalData">-</strong>
+            </div>
+
+            <div class="card">
+                <span>Total Kolom</span>
+                <strong id="totalColumns">-</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Filter -->
+        <section class="filter-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Cari outlet..."
+            >
+
+        </section>
+
+
+        <!-- Table -->
+        <section class="table-container">
+
+            <table id="dataTable">
+
+                <thead id="tableHead"></thead>
+
+                <tbody id="tableBody"></tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
